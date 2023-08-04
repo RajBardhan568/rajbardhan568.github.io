@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="images/logo2.png" type="image/x-icon">
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/93101240a5.js" crossorigin="anonymous"></script>
 </head>
@@ -24,8 +25,7 @@
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-            <p>UI/UX Designer</p>
-            <h1>Hi, I'm <span> Raj Bardhan</span></h1>
+            <h1>Hi, I'm <span class="auto-type" ></span></h1>
 
         </div>
     </div>
@@ -38,7 +38,12 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id numquam tempora ea quo repudiandae quod saepe possimus nesciunt corrupti officiis iure vitae illo harum sed repellendus iste et, consequatur sint.</p>
+                    <p>First year CSE
+                        Undergraduate, looking for
+                        opportunities that would
+                        help me grow professionally
+                        while being resourceful for
+                        the organization.</p>
                     
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -54,16 +59,19 @@
                     </div> 
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>After Effect </span><br>VFX</li>
-                            <li><span>Premier Pro</span><br>Video Editior</li>
-                            <li><span>Photoshop</span><br>Layout Designer </li>
+                            <li><span>Web Development </span><br>My own Portfolio Website created by me using
+                                HTML,CSS and a few JavaScript</li>
+                            <li><span>Premier Pro,After Effect</span><br>Video Editior</li>
+                            <li><span>UI/UX Designer</span><br>Photoshop, Figma </li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>UI/UX</span><br>Designing Web/App Interface</li>
-                            <li><span>Web Development</span><br>Designing Web App Development</li>
-                            <li><span>App Development</span><br>Building Android/IOS apps </li>
+                            <li><span>Matriculation ( 2k19 )</span><br>Rosemary Land School</li>
+                            <li><span>Intermediate in Science & Mathematics ( 2k22 )</span><br>
+                                L.S.T College, AungariDham</li>
+                            <li><span>B.Tech in Computer Science &
+                                Engineering ( 2k22 - 2k26 )</span><br>Katihar Engineering College</li>
                         </ul>
                     </div>
                 </div>
@@ -172,84 +180,6 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
-// ....................................animation..................
-// $(document).ready(function () {
-//             $(window).scroll(function () {
-//                 // sticky navbar on scroll script
-//                 if (this.scrollY > 20) {
-//                     $('.navbar').addClass("sticky");
-//                 } else {
-//                     $('.navbar').removeClass("sticky");
-//                 }
-
-//                 // scroll-up button show/hide script
-//                 if (this.scrollY > 500) {
-//                     $('.scroll-up-btn').addClass("show");
-//                 } else {
-//                     $('.scroll-up-btn').removeClass("show");
-//                 }
-//             });
-
-//             // slide-up script
-//             $('.scroll-up-btn').click(function () {
-//                 $('html').animate({ scrollTop: 0 });
-//                 // removing smooth scroll on slide-up button click
-//                 $('html').css("scrollBehavior", "auto");
-//             });
-
-//             $('.navbar .menu li a').click(function () {
-//                 // applying again smooth scroll on menu items click
-//                 $('html').css("scrollBehavior", "smooth");
-//             });
-
-//             // toggle menu/navbar script
-//             $('.menu-btn').click(function () {
-//                 $('.navbar .menu').toggleClass("active");
-//                 $('.menu-btn i').toggleClass("active");
-//             });
-
-//             // typing text animation script
-//             var typed = new Typed(".typing", {
-//                 strings: ["Developer", "Designer", "Freelancer"],
-//                 typeSpeed: 100,
-//                 backSpeed: 60,
-//                 loop: true
-//             });
-
-//             var typed = new Typed(".typing-2", {
-//                 strings: ["Developer", "Designer", "Freelancer"],
-//                 typeSpeed: 100,
-//                 backSpeed: 60,
-//                 loop: true
-//             });
-
-//             // owl carousel script
-//             $('.carousel').owlCarousel({
-//                 margin: 20,
-//                 loop: true,
-//                 autoplay: true,
-//                 autoplayTimeOut: 2000,
-//                 autoplayHoverPause: true,
-//                 responsive: {
-//                     0: {
-//                         items: 1,
-//                         nav: false
-//                     },
-//                     600: {
-//                         items: 2,
-//                         nav: false
-//                     },
-//                     1000: {
-//                         items: 3,
-//                         nav: false
-//                     }
-//                 }
-//             });
-//         });
-    
-
-
-
 
     </script>
     <script>
@@ -281,6 +211,15 @@
             form.reset()
         })
         .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed(".auto-type",{
+        strings : ["Raj Bardhan", "a UI/UX Designer", "a Web Developer","a App Developer","Freelancer"],
+        typeSpeed : 100,
+        backSpeed : 100,
+        loop : true 
     })
   </script>
 </body>
